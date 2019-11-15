@@ -55,9 +55,9 @@ const aeSource =`
       let index = getTicketslength() + 1
       put(state {ticket[index] = tickets, ticketslength = index })
 
-      stateful entrypoint ticketBooking(index : int) = 
-        let tickets = getevents(index)
-        Chain.spend(tickets.conAddress, Call.value) 
+  stateful entrypoint ticketBooking(index : int) = 
+      let tickets = getevents(index)
+      Chain.spend(tickets.uploadAddress, Call.value) 
         
   `;        
      
